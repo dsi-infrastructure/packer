@@ -13,26 +13,37 @@ Si vous voulez créer des images spécifiques aux plateformes VMWARE ou KVM, il 
 ## Utilisation
 
 * Ubuntu 12.04 pour virtualbox (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=virtualbox version=12.04
 ```
+
 * Ubuntu 12.04 pour vmware-workstation/vmware fusion (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=vmware version=12.04
 ```
+
 * Ubuntu 12.04 pour kvm (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=kvm version=12.04
 ```
+
 * Ubuntu 14.04 pour virtualbox (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=virtualbox version=14.04
 ```
+
 * Ubuntu 14.04 pour vmware-workstation/vmware fusion (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=vmware version=14.04
 ```
+
 * Ubuntu 14.04 pour kvm (DEV)
+
 ```
 rake dev:create systeme=ubuntu hypervisor=kvm version=14.04
 ```
