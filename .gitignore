@@ -1,0 +1,6 @@
+packer_cache/
+output-*
+*.box
+*.qcow2
+*.ova
+
