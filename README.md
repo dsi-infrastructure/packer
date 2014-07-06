@@ -51,9 +51,10 @@ rake dev:create systeme=ubuntu hypervisor=kvm version=14.04
 
 ## Sortie
 
-* ubuntu12.04-dev-virtualbox.box
-* ubuntu12.04-dev-vmware.box
-* ubuntu12.04-dev-kvm.qcow2
-* ubuntu14.04-dev-virtualbox.box
-* ubuntu14.04-dev-vmware.box
-* ubuntu14.04-dev-kvm.qcow2
+* [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box)
+* [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box)
+* [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-kvm.qcow2)
+* [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box)
+* [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box)
+* [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2)
+
