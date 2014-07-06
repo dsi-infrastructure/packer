@@ -2,7 +2,7 @@ require 'rake'
 require 'pathname'
 require 'rainbow'
 
-task :default => ['dev:validate']
+task :default => ['list']
 
 namespace :dev do
   desc 'Create the base system'
