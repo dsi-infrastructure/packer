@@ -1,5 +1,4 @@
 require 'rake'
-require 'pathname'
 require 'rainbow'
 
 task :default => ['list']
