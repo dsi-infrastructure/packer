@@ -3,6 +3,7 @@
 * packer
 * virtualbox
 * rake
+* rainbow ```sudo gem install rainbow```
 
 Si vous voulez créer des images spécifiques aux plateformes VMWARE ou KVM, il vous faudra, en plus, installer :
 
