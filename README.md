@@ -30,37 +30,37 @@ Les systèmes de développement sont des images utilisables par Vagrant.
 * Ubuntu 12.04 pour virtualbox (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=virtualbox version=12.04
+rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04
 ```
 
 * Ubuntu 12.04 pour vmware-workstation/vmware fusion (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=vmware version=12.04
+rake dev:build systeme=ubuntu hypervisor=vmware version=12.04
 ```
 
 * Ubuntu 12.04 pour kvm (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=kvm version=12.04
+rake dev:build systeme=ubuntu hypervisor=kvm version=12.04
 ```
 
 * Ubuntu 14.04 pour virtualbox (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=virtualbox version=14.04
+rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04
 ```
 
 * Ubuntu 14.04 pour vmware-workstation/vmware fusion (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=vmware version=14.04
+rake dev:build systeme=ubuntu hypervisor=vmware version=14.04
 ```
 
 * Ubuntu 14.04 pour kvm (DEV)
 
 ```
-rake dev:create systeme=ubuntu hypervisor=kvm version=14.04
+rake dev:build systeme=ubuntu hypervisor=kvm version=14.04
 ```
 
 ### Production
@@ -70,13 +70,13 @@ Les systèmes de production ne contient pas de compte vagrant, celui-ci est remp
 * Ubuntu 12.04 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
 
 ```
-rake prod:create systeme=ubuntu hypervisor=vmware version=12.04
+rake prod:build systeme=ubuntu hypervisor=vmware version=12.04
 ```
 
 * Ubuntu 14.04 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
 
 ```
-rake prod:create systeme=ubuntu hypervisor=vmware version=14.04
+rake prod:build systeme=ubuntu hypervisor=vmware version=14.04
 ```
 
 ### Déploiement

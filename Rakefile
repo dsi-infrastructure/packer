@@ -4,8 +4,8 @@ require 'rainbow'
 task :default => ['list']
 
 namespace :dev do
-  desc 'Create the base system'
-  task :create do
+  desc 'Build the base system'
+  task :build do
     environnement = 'dev'
     systeme = ENV['systeme']
     hypervisor = ENV['hypervisor']
@@ -31,8 +31,8 @@ namespace :dev do
 end
 
 namespace :prod do
-  desc 'Create the base system'
-  task :create do
+  desc 'Build the base system'
+  task :build do
     environnement = 'prod'
     systeme = ENV['systeme']
     hypervisor = ENV['hypervisor']
