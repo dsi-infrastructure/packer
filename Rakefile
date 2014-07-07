@@ -34,3 +34,14 @@ task :list do
   system "ls -1 templates/*.json"
 end
 
+desc "Deploy images via SCP"
+task :deploy do
+  target = "repository.srv.gov.pf"
+  src_dir = "deploy/*"
+  dst_dir = "/var/www/os/"
+  scp_user = ENV['user']
+
+  puts Rainbow("Deploying website via SFTP").green
+  system("mv -f *.box *.qcow2 deploy/")
+  system("scp #{src_dir} #{scp_user}@#{target}:#{dst_dir}")
+end
