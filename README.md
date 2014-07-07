@@ -79,6 +79,18 @@ rake prod:build systeme=ubuntu hypervisor=vmware version=12.04
 rake prod:build systeme=ubuntu hypervisor=vmware version=14.04
 ```
 
+* Ubuntu 12.04 pour Openstack-kvm QCOW2 (PROD)
+
+```
+rake prod:build systeme=ubuntu hypervisor=kvm version=12.04
+```
+
+* Ubuntu 14.04 pour Openstack-kvm QCOW2 (PROD)
+
+```
+rake prod:build systeme=ubuntu hypervisor=kvm version=14.04
+```
+
 ### Déploiement
 
 Une procédure de déploiement a été écrite et est utilisable de la manière suivante :
@@ -104,6 +116,8 @@ Il vous faudra un compte sur le serveur permettant le déploiement des images sy
 
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova)
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova)
+* [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2)
+* [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2)
 
 ## Participer aux développements de ce projet
 
