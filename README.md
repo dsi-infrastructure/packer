@@ -1,19 +1,27 @@
-Ce projet permet de générer des images systèmes identiques pour le développement et la production.
+Ce projet permet de générer des images systèmes identiques pour le développement et la production, ceci afin de minimiser les impacts fonctionnels lors des mises en production.
+
+## A faire
+
+* Debian 7.4
+* Centos 6.5
+* Oracle Enterprise Linux 6.5
 
 ## Pré-requis
 
-* packer
-* virtualbox
+* packer (voir http://www.packer.io)
+* virtualbox (voir http://www.virtualbox.org)
 * ruby/ruby-dev ```sudo apt-get install ruby ruby-dev```
 * rake ```sudo gem install rake```
 * rainbow ```sudo gem install rainbow```
 
 Si vous voulez créer des images spécifiques aux plateformes VMWARE ou KVM, il vous faudra, en plus, installer :
 
-* vmware-workstation
+* vmware-workstation (voir http://www.vmware.com)
 * kvm ```sudo apt-get install qemu-kvm```
 
 ## Utilisation
+
+Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre incalculable de fois qu'elles sont été lancé ^^"
 
 ### Développement
 
@@ -97,3 +105,6 @@ Il vous faudra un compte sur le serveur permettant le déploiement des images sy
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova)
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova)
 
+## Participer aux développements de ce projet
+
+Vous pouvez participer à ce projet en le forkant et en soumettant des PR (Pull Request).
