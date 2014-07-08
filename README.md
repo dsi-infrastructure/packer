@@ -2,7 +2,6 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 ## A faire
 
-* Debian 7.4
 * Centos 6.5
 * Oracle Enterprise Linux 6.5
 
