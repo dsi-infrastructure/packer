@@ -63,6 +63,18 @@ rake dev:build systeme=ubuntu hypervisor=vmware version=14.04
 rake dev:build systeme=ubuntu hypervisor=kvm version=14.04
 ```
 
+* Debian 7.5 pour virtualbox (DEV)
+
+```
+rake dev:build systeme=debian hypervisor=virtualbox version=7.5
+```
+
+* Debian 7.5 pour vmware-workstation/vmware fusion (DEV)
+
+```
+rake dev:build systeme=debian hypervisor=vmware version=7.5
+```
+
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
@@ -91,6 +103,12 @@ rake prod:build systeme=ubuntu hypervisor=kvm version=12.04
 rake prod:build systeme=ubuntu hypervisor=kvm version=14.04
 ```
 
+* Debian 7.5 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+
+```
+rake prod:build systeme=debian hypervisor=vmware version=7.5
+```
+
 ### Déploiement
 
 Une procédure de déploiement a été écrite et est utilisable de la manière suivante :
@@ -111,11 +129,14 @@ Il vous faudra un compte sur le serveur permettant le déploiement des images sy
 * [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box)
 * [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box)
 * [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2)
+* [debian7.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box)
+* [debian7.5-dev-vmware.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box)
 
 ### Production
 
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
+* [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
 * [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2) (Openstack)
 * [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2) (Openstack)
 
