@@ -6,12 +6,14 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
-#### Ubuntu LTS
+#### Ubuntu 12.04 LTS
 * [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant)
 * [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 * [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
 * [ubuntu12.04-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
 * [ubuntu12.04-dev-vmware-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+
+#### Ubuntu 14.04 LTS
 * [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant)
 * [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 * [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
@@ -40,12 +42,14 @@ Les systèmes de développement sont des images utilisables par [Vagrant](http:/
 
 Les images systèmes de production seront disponible directement sous Vsphere ou via Glance pour Openstack. N'oubliez pas de changer le mot de passe du compte sysadmin (changeit).
 
-#### Ubuntu LTS
+#### Ubuntu 12.04 LTS
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
-* [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
 * [ubuntu12.04-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere + puppet only - soon)
-* [ubuntu14.04-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2) (Openstack)
+
+#### Ubuntu 14.04 LTS
+* [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
+* [ubuntu14.04-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2) (Openstack)
 
 #### Debian 7.5
