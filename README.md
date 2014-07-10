@@ -38,12 +38,15 @@ Les images systèmes de production seront disponible directement sous Vsphere ou
 
 #### Debian 7.5
 * [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
+* [debian7.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/debian-7.5-prod-kvm.qcow2) (Openstack - very soon)
 
 #### Centos 6.5
 * [centos6.5-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
+* [centos6.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/centos-6.5-prod-kvm.qcow2) (Openstack - soon)
 
 #### Oracle Linux Enterprise 6.4
 * [oel6.4-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
+* [oel6.4-prod-kvm.qcow2](http://repository.srv.gov.pf/os/oel-6.4-prod-kvm.qcow2) (Openstack - soon)
 
 ## Construire les images systèmes
 
