@@ -9,7 +9,7 @@ Les systèmes de développement sont des images utilisables par [Vagrant](http:/
 #### Ubuntu LTS
 * [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant)
 * [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu12.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
+* [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
 * [ubuntu12.04-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
 * [ubuntu12.04-dev-vmware-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
 * [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant)
