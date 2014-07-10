@@ -6,10 +6,10 @@
       "override": {
         "qemu": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/cloudinit.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/ubuntu/base.sh",
+            "scripts/ubuntu/cloudinit.sh",
+            "scripts/ubuntu/cleanup.sh",
+            "scripts/ubuntu/zerodisk.sh"
           ]
         }
       }

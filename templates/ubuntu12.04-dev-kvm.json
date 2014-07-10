@@ -6,10 +6,10 @@
       "override": {
         "qemu": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/ubuntu/base.sh",
+            "scripts/ubuntu/vagrant.sh",
+            "scripts/ubuntu/cleanup.sh",
+            "scripts/ubuntu/zerodisk.sh"
           ]
         }
       }
