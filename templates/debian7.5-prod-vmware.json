@@ -6,10 +6,10 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vmware-tools.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/debian/base.sh",
+            "scripts/debian/vmware-tools2.sh",
+            "scripts/debian/cleanup.sh",
+            "scripts/debian/zerodisk.sh"
           ]
         }
       }

@@ -31,6 +31,8 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 #### Debian 7.5
 * [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
 
+#### Centos 6.5
+* [centos6.5-prod-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.box) (Vsphere)
 
 ## Construire les images systèmes
 
@@ -165,6 +167,12 @@ rake prod:build systeme=ubuntu hypervisor=kvm version=14.04
 
 ```
 rake prod:build systeme=debian hypervisor=vmware version=7.5
+```
+
+* Centos 6.5 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+
+```
+rake prod:build systeme=centos hypervisor=vmware version=6.5
 ```
 
 ### Déploiement

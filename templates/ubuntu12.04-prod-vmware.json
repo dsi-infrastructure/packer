@@ -6,10 +6,10 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vmware-tools.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/ubuntu/base.sh",
+            "scripts/ubuntu/vmware-tools2.sh",
+            "scripts/ubuntu/cleanup.sh",
+            "scripts/ubuntu/zerodisk.sh"
           ]
         }
       }
@@ -43,7 +43,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 40960,
+      "disk_size": 10240,
       "guest_os_type": "linux",
       "http_directory": "http",
       "iso_url": "http://releases.ubuntu.com/12.04/ubuntu-12.04.4-server-amd64.iso",
