@@ -183,5 +183,4 @@ Vous pouvez participer à ce projet en le forkant et en soumettant des PR (Pull 
 
 ### A faire
 
-* Centos 6.5
 * Oracle Enterprise Linux 6.5
