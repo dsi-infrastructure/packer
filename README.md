@@ -39,20 +39,30 @@ Pour construire les images systèmes, il vous faut installer les pré-requis sui
 * virtualbox (voir http://www.virtualbox.org)
 * ruby/ruby-dev
 
-```sudo apt-get install ruby ruby-dev```
+```
+sudo apt-get install ruby ruby-dev
+```
 
 * rake
 
-```sudo gem install rake```
+```
+sudo gem install rake
+```
 
 * rainbow
 
-```sudo gem install rainbow```
+```
+sudo gem install rainbow
+```
 
 Si vous voulez créer des images spécifiques aux plateformes VMWARE ou KVM (notamment pour Openstack), il vous faudra installer, en plus :
 
 * vmware-workstation (voir http://www.vmware.com)
-* kvm ```sudo apt-get install qemu-kvm```
+* kvm
+
+```
+sudo apt-get install qemu-kvm
+```
 
 ## Utilisation
 
