@@ -74,6 +74,12 @@ rake dev:build systeme=debian hypervisor=virtualbox version=7.5
 rake dev:build systeme=debian hypervisor=vmware version=7.5
 ```
 
+* Centos 6.5 pour virtualbox (DEV)
+
+```
+rake dev:build systeme=centos hypervisor=virtualbox version=6.5
+```
+
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
@@ -130,6 +136,7 @@ Il vous faudra un compte sur le serveur permettant le déploiement des images sy
 * [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
 * [debian7.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box) (Virtualbox + Vagrant)
 * [debian7.5-dev-vmware.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
+* [centos6.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant)
 
 ### Production
 
