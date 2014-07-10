@@ -80,7 +80,7 @@ sudo apt-get install qemu-kvm
 
 ## Utilisation
 
-Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre incalculable de fois qu'elles sont été lancé ^^"
+Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre incalculable de fois qu'elles ont été lancés ^^"
 
 ### Développement
 
