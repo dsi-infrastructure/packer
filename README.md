@@ -1,26 +1,34 @@
-Ce projet permet de générer des images systèmes identiques pour le développement et la production, ceci afin de minimiser les impacts fonctionnels lors des mises en production.
+Ce projet permet de générer des images systèmes identiques pour le développement et la production, ceci afin de minimiser les impacts fonctionnels lors des mises en production. Toutes les images systèmes générés prennent 10Go d'espace disques une fois déployées. LVM a été intégré dans les images (à l'exception des images OPENSTACK) afin de simplifier le redimensionnement au besoin.
 
 ## Listes des images systèmes disponibles
 
 ### Développement
 
+Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
+
 #### Ubuntu LTS
 * [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
+* [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 * [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu12.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
 * [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
+* [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 * [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
 
 #### Debian 7.5
 * [debian7.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [debian7.5-dev-vmware.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
+* [debian7.5-dev-vmware.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 
 #### Centos 6.5
 * [centos6.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [centos6.5-dev-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
+* [centos6.5-dev-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
+
+#### Oracle Linux Enterprise 6.4
+* [oel6.4-dev-virtualbox.box](http://repository.srv.gov.pf/os/oel-6.4-dev-virtualbox.box) (Virtualbox + Vagrant)
+* [oel6.4-dev-vmware.box](http://repository.srv.gov.pf/os/oel-6.4-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
 
 ### Production
+
+Les images systèmes de production seront disponible directement sous Vsphere ou via Glance pour Openstack. N'oubliez pas de changer le mot de passe du compte sysadmin (changeit).
 
 #### Ubuntu LTS
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
@@ -33,6 +41,9 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 #### Centos 6.5
 * [centos6.5-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
+
+#### Oracle Linux Enterprise 6.4
+* [oel6.4-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
 
 ## Construire les images systèmes
 
@@ -73,7 +84,7 @@ Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre 
 
 ### Développement
 
-Les systèmes de développement sont des images utilisables par Vagrant.
+Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
 * Ubuntu 12.04 pour virtualbox (DEV)
 
@@ -135,6 +146,18 @@ rake dev:build systeme=centos hypervisor=virtualbox version=6.5
 rake dev:build systeme=centos hypervisor=vmware version=6.5
 ```
 
+* Oracle Enterprise Linux 6.4 pour virtualbox (DEV)
+
+```
+rake dev:build systeme=oel hypervisor=virtualbox version=6.4
+```
+
+* Oracle Enterprise Linux 6.4 pour vmware-workstation/vmware fusion (DEV)
+
+```
+rake dev:build systeme=oel hypervisor=vmware version=6.4
+```
+
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
@@ -175,6 +198,12 @@ rake prod:build systeme=debian hypervisor=vmware version=7.5
 rake prod:build systeme=centos hypervisor=vmware version=6.5
 ```
 
+* Oracle Enterprise Linux 6.4 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+
+```
+rake prod:build systeme=oel hypervisor=vmware version=6.4
+```
+
 ### Déploiement
 
 Une procédure de déploiement a été écrite et est utilisable de la manière suivante :
@@ -189,6 +218,3 @@ Il vous faudra un compte sur le serveur permettant le déploiement des images sy
 
 Vous pouvez participer à ce projet en le forkant et en soumettant des PR (Pull Request).
 
-### A faire
-
-* Oracle Enterprise Linux 6.5
