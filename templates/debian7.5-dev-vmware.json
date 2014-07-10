@@ -6,11 +6,11 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/vmware-tools.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/debian/base.sh",
+            "scripts/debian/vagrant.sh",
+            "scripts/debian/vmware-tools.sh",
+            "scripts/debian/cleanup.sh",
+            "scripts/debian/zerodisk.sh"
           ]
         }
       }
@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "vmware": {
-          "output": "debian7.5-dev-vmware.box"
+          "output": "debian-7.5-dev-vmware.box"
         }
       }
     }

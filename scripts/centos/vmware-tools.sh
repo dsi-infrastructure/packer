@@ -6,9 +6,6 @@ VMWARE_TOOLS_ISO="/home/vagrant/linux.iso"
 
 echo "Installing virtual machine tools for ${PACKER_BUILDER_TYPE}"
 
-echo "Installing VMWare Tools required packages ${VMWARE_REQUIRED_PACKAGES}"
-apt-get install -y ${VMWARE_REQUIRED_PACKAGES}
-
 echo "Mounting ${VMWARE_TOOLS_ISO} onto ${ISO_MOUNT}"
 mount -o loop ${VMWARE_TOOLS_ISO} ${ISO_MOUNT}
 

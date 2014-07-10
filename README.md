@@ -18,10 +18,11 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 #### Centos 6.5
 * [centos6.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant)
+* [centos6.5-dev-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-dev-vmware.box) (Vmware Fusion/Vmware workstation + Vagrant)
 
 ### Production
 
-#### Ubuntu LST
+#### Ubuntu LTS
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
 * [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2) (Openstack)
@@ -124,6 +125,12 @@ rake dev:build systeme=debian hypervisor=vmware version=7.5
 
 ```
 rake dev:build systeme=centos hypervisor=virtualbox version=6.5
+```
+
+* Centos 6.5 pour vmware-workstation/vmware fusion (DEV)
+
+```
+rake dev:build systeme=centos hypervisor=vmware version=6.5
 ```
 
 ### Production

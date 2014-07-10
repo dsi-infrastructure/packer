@@ -1,0 +1,55 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+      "override": {
+        "vmware-iso": {
+          "scripts": [
+            "scripts/centos/base.sh",
+            "scripts/centos/vagrant.sh",
+            "scripts/centos/vmware-tools.sh",
+            "scripts/centos/cleanup.sh",
+            "scripts/centos/zerodisk.sh"
+          ]
+        }
+      }
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "override": {
+        "vmware": {
+          "output": "centos-6.5-dev-vmware.box"
+        }
+      }
+    }
+  ],
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "boot_command": [
+      	"<tab> text ks=http://192.168.0.17/packer/kickstart/centos-dev.kickstart<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 10240,
+      "guest_os_type": "centos-64",
+      "http_directory": "http",
+      "iso_url": "http://localhost/packer/iso/CentOS-6.5-x86_64-bin-DVD1.iso",
+      "iso_checksum": "83221db52687c7b857e65bfe60787838",
+      "iso_checksum_type": "md5",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "tools_upload_flavor": "linux",
+      "vmx_data": {
+        "memsize": "512",
+        "numvcpus": "1",
+        "cpuid.coresPerSocket": "1"
+      }
+    }
+  ]
+}

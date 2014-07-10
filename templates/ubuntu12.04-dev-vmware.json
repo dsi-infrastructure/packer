@@ -6,11 +6,11 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/vmware.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/ubuntu/base.sh",
+            "scripts/ubuntu/vagrant.sh",
+            "scripts/ubuntu/vmware-tools.sh",
+            "scripts/ubuntu/cleanup.sh",
+            "scripts/ubuntu/zerodisk.sh"
           ]
         }
       }
@@ -54,7 +54,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 40960,
+      "disk_size": 10240,
       "guest_os_type": "linux",
       "http_directory": "http",
       "iso_url": "http://releases.ubuntu.com/12.04/ubuntu-12.04.4-server-amd64.iso",
@@ -65,6 +65,7 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'shutdown -P now' > /tmp/shutdown.sh; echo 'vagrant'|sudo -S sh '/tmp/shutdown.sh'",
+      "tools_upload_flavor": "linux",
       "vmx_data": {
         "memsize": "512",
         "numvcpus": "1",

@@ -27,3 +27,4 @@ ${VMWARE_INSTALL_PL} -d
 echo "Cleaning up ${VMWARE_TOOLS_ISO} and ${VMWARE_TOOLS_TMP}"
 rm ${VMWARE_TOOLS_ISO}
 rm -rf ${VMWARE_TOOLS_TMP}
+apt-get autoremove --purge -y ${VMWARE_REQUIRED_PACKAGES}
