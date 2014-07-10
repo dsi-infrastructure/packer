@@ -51,7 +51,7 @@ namespace :prod do
     # Pour Vsphere
     if hypervisor === "vmware"
       puts Rainbow("Creating OVA").green
-      system "ovftool output-vmware-iso/packer-vmware-iso.vmx #{systeme}#{version}-#{environnement}-#{hypervisor}.ova && rm -fr output-vmware-iso"
+      system "ovftool output-vmware-iso/packer-vmware-iso.vmx #{systeme}-#{version}-#{environnement}-#{hypervisor}.ova && chmod 644 #{systeme}-#{version}-#{environnement}-#{hypervisor}.ova && rm -fr output-vmware-iso"
     end
 
     # Pour Openstack
