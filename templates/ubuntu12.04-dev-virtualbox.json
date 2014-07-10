@@ -6,11 +6,11 @@
       "override": {
         "virtualbox-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/virtualbox.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/ubuntu/base.sh",
+            "scripts/ubuntu/vagrant.sh",
+            "scripts/ubuntu/virtualbox-tools.sh",
+            "scripts/ubuntu/cleanup.sh",
+            "scripts/ubuntu/zerodisk.sh"
           ]
         }
       }
@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "ubuntu12.04-dev-virtualbox.box"
+          "output": "ubuntu-12.04-dev-virtualbox.box"
         }
       }
     }
@@ -54,7 +54,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 40960,
+      "disk_size": 10240,
       "guest_os_type": "Ubuntu_64",
       "http_directory": "http",
       "iso_url": "http://releases.ubuntu.com/12.04/ubuntu-12.04.4-server-amd64.iso",
@@ -65,6 +65,8 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'shutdown -P now' > /tmp/shutdown.sh; echo 'vagrant'|sudo -S sh '/tmp/shutdown.sh'",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "512" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]

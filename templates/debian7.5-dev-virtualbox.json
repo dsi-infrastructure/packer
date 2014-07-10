@@ -6,11 +6,11 @@
       "override": {
         "virtualbox-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/virtualbox-tools.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
+            "scripts/debian/base.sh",
+            "scripts/debian/vagrant.sh",
+            "scripts/debian/virtualbox-tools.sh",
+            "scripts/debian/cleanup.sh",
+            "scripts/debian/zerodisk.sh"
           ]
         }
       }
@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "debian7.5-dev-virtualbox.box"
+          "output": "debian-7.5-dev-virtualbox.box"
         }
       }
     }
