@@ -32,7 +32,7 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 * [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
 
 #### Centos 6.5
-* [centos6.5-prod-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.box) (Vsphere)
+* [centos6.5-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
 
 ## Construire les images systèmes
 
