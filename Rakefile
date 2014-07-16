@@ -10,7 +10,15 @@ namespace :dev do
     systeme = ENV['systeme']
     hypervisor = ENV['hypervisor']
     version = ENV['version']
-    template = "#{systeme}#{version}-#{environnement}-#{hypervisor}.json"
+    cm = ENV['cm']
+
+    install_cm = case cm
+      when "chef" then "-chef"
+      when "puppet" then "-puppet"
+      else ""
+    end
+
+    template = "#{systeme}#{version}-#{environnement}-#{hypervisor}#{install_cm}.json"
 
     puts Rainbow("Validating #{template}").green
     unless system "packer validate templates/#{template}"
