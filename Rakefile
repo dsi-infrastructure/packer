@@ -58,6 +58,8 @@ namespace :prod do
 
     # Pour Vsphere
     if hypervisor === "vmware"
+      puts Rainbow("Delete ethernet card").green
+      system "cat output-vmware-iso/packer-vmware-iso.vmx | grep -v ethernet0 > /tmp/packer-vmware-iso.vmx && cat /tmp/packer-vmware-iso.vmx > output-vmware-iso/packer-vmware-iso.vmx"
       puts Rainbow("Creating OVA").green
       system "ovftool output-vmware-iso/packer-vmware-iso.vmx #{systeme}-#{version}-#{environnement}-#{hypervisor}.ova && chmod 644 #{systeme}-#{version}-#{environnement}-#{hypervisor}.ova && rm -fr output-vmware-iso"
     end
