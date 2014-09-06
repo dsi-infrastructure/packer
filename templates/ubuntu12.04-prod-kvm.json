@@ -8,6 +8,7 @@
           "scripts": [
             "scripts/ubuntu/base.sh",
             "scripts/ubuntu/cloudinit.sh",
+            "scripts/ubuntu/grub.sh",
             "scripts/ubuntu/cleanup.sh",
             "scripts/ubuntu/zerodisk.sh"
           ]
