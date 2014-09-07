@@ -7,11 +7,22 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
 #### Ubuntu 12.04 LTS
-* [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [ubuntu12.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
-* [ubuntu12.04-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
-* [ubuntu12.04-dev-vmware-cm.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+* [ubuntu12.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box)
+```
+vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box
+```
+* [ubuntu12.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box)
+```
+vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box
+```
+* [ubuntu12.04-dev-virtualbox-chef.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box)
+```
+vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox-chef.box
+```
+* [ubuntu12.04-dev-vmware-chef.box](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box)
+```
+vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware-chef.box
+```
 
 #### Ubuntu 14.04 LTS
 * [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant)
