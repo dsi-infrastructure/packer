@@ -10,44 +10,36 @@ Les systèmes de développement sont des images utilisables par [Vagrant](http:/
 * Virtualbox ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box
-vagrant up
 ```
 * VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
 ```
 vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box
-vagrant up
 ```
 * Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox-chef.box
-vagrant up
 ```
 * VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
 ```
 vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware-chef.box
-vagrant up
 ```
 
 #### Ubuntu 14.04 LTS
 * Virtualbox ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box
-vagrant up
 ```
 * VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
 ```
 vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box
-vagrant up
 ```
 * Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox-chef.box
-vagrant up
 ```
 * VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
 ```
 vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware-chef.box
-vagrant up
 ```
 
 #### Debian 7.5
