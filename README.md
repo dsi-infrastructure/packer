@@ -7,21 +7,25 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
 #### Ubuntu 12.04 LTS
-* Virtualbox 4.3.14 ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
+* Virtualbox ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box
+vagrant up
 ```
-* VMware fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
+* VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
 ```
 vagrant init ubuntu12.04 http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box
+vagrant up
 ```
-* Virtualbox 4.3.14 avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
+* Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox.box))
 ```
 vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-virtualbox-chef.box
+vagrant up
 ```
-* VMware fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
+* VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware.box))
 ```
 vagrant init ubuntu12.04-chef http://repository.srv.gov.pf/os/ubuntu-12.04-dev-vmware-chef.box
+vagrant up
 ```
 
 #### Ubuntu 14.04 LTS
