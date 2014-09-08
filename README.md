@@ -29,11 +29,26 @@ vagrant up
 ```
 
 #### Ubuntu 14.04 LTS
-* [ubuntu14.04-dev-virtualbox.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [ubuntu14.04-dev-vmware.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [ubuntu14.04-dev-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-kvm.qcow2) (Qemu-kvm/virt-manager)
-* [ubuntu14.04-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
-* [ubuntu14.04-dev-vmware-cm.box](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+* Virtualbox ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
+```
+vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box
+vagrant up
+```
+* VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
+```
+vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box
+vagrant up
+```
+* Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
+```
+vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox-chef.box
+vagrant up
+```
+* VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
+```
+vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware-chef.box
+vagrant up
+```
 
 #### Debian 7.5
 * [debian7.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box) (Virtualbox + Vagrant)
