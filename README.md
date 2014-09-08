@@ -42,11 +42,23 @@ vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-v
 vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware-chef.box
 ```
 
-#### Debian 7.5
-* [debian7.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [debian7.5-dev-vmware.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [debian7.5-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/debian-7.5-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
-* [debian7.5-dev-vmware-cm.box](http://repository.srv.gov.pf/os/debian-7.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+#### Debian 7
+* Virtualbox ([download](http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box))
+```
+vagrant init debian-7 http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box
+```
+* VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/debian-7-dev-vmware.box))
+```
+vagrant init debian-7 http://repository.srv.gov.pf/os/debian-7-dev-vmware.box
+```
+* Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box))
+```
+vagrant init debian-7-chef http://repository.srv.gov.pf/os/debian-7-dev-virtualbox-chef.box
+```
+* VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/debian-7-dev-vmware.box))
+```
+vagrant init debian-7-chef http://repository.srv.gov.pf/os/debian-7-dev-vmware-chef.box
+```
 
 #### Centos 6.5
 * [centos6.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant)
