@@ -43,21 +43,21 @@ vagrant init ubuntu14.04-chef http://bit.ly/1pK1sQ8
 ```
 
 #### Debian 7
-* Virtualbox ([download](http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box))
+* Virtualbox ([download](http://bit.ly/1nHCYaN))
 ```
-vagrant init debian-7 http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box
+vagrant init debian-7 http://bit.ly/1nHCYaN
 ```
-* VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/debian-7-dev-vmware.box))
+* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
 ```
-vagrant init debian-7 http://repository.srv.gov.pf/os/debian-7-dev-vmware.box
+vagrant init debian-7 http://bit.ly/1w9Vu3u
 ```
-* Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/debian-7-dev-virtualbox.box))
+* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
 ```
-vagrant init debian-7-chef http://repository.srv.gov.pf/os/debian-7-dev-virtualbox-chef.box
+vagrant init debian-7-chef http://bit.ly/1weDdiJ
 ```
-* VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/debian-7-dev-vmware.box))
+* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
 ```
-vagrant init debian-7-chef http://repository.srv.gov.pf/os/debian-7-dev-vmware-chef.box
+vagrant init debian-7-chef http://bit.ly/1tpmh7c
 ```
 
 #### Centos 6.5
