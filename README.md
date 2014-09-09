@@ -25,21 +25,21 @@ vagrant init ubuntu12.04-chef http://bit.ly/1qaxsDi
 ```
 
 #### Ubuntu 14.04 LTS
-* Virtualbox ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
+* Virtualbox ([download](http://bit.ly/1nHCDF6))
 ```
-vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box
+vagrant init ubuntu14.04 http://bit.ly/1nHCDF6
 ```
-* VMware Fusion/Workstation ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
+* VMware Fusion/Workstation ([download](http://bit.ly/WJXRuE))
 ```
-vagrant init ubuntu14.04 http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box
+vagrant init ubuntu14.04 http://bit.ly/WJXRuE
 ```
-* Virtualbox avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox.box))
+* Virtualbox avec Chef ([download](http://bit.ly/1qBrpXj))
 ```
-vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-virtualbox-chef.box
+vagrant init ubuntu14.04-chef http://bit.ly/1qBrpXj
 ```
-* VMware Fusion/Workstation avec Chef ([download](http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware.box))
+* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1pK1sQ8))
 ```
-vagrant init ubuntu14.04-chef http://repository.srv.gov.pf/os/ubuntu-14.04-dev-vmware-chef.box
+vagrant init ubuntu14.04-chef http://bit.ly/1pK1sQ8
 ```
 
 #### Debian 7
