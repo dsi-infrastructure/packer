@@ -78,27 +78,22 @@ Les images systèmes de production seront disponible directement sous Vsphere ou
 
 #### Ubuntu 12.04 LTS
 * [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
-* [ubuntu12.04-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2) (Openstack)
 
 #### Ubuntu 14.04 LTS
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
-* [ubuntu14.04-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2) (Openstack)
 
 #### Debian 7.5
 * [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
-* [debian7.5-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [debian7.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/debian-7.5-prod-kvm.qcow2) (Openstack - very soon)
 
 #### Centos 6.5
 * [centos6.5-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
-* [centos6.5-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [centos6.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/centos-6.5-prod-kvm.qcow2) (Openstack - soon)
 
 #### Oracle Linux Enterprise 6.4
 * [oel6.4-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
-* [oel6.4-prod-vmware-cm.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere + puppet only - soon)
 * [oel6.4-prod-kvm.qcow2](http://repository.srv.gov.pf/os/oel-6.4-prod-kvm.qcow2) (Openstack - soon)
 
 ## Construire les images systèmes
