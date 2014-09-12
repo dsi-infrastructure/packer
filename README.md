@@ -1,7 +1,7 @@
 # Standardisation des systèmes
 
 [![Build
-Status](https://travis-ci.org/sitle/packer.svg?branch=master)](https://travis-ci.org/sitle/packer)
+Status](https://travis-ci.org/sitle/packer.svg?branch=master)](https://travis-ci.org/sitle/packer) [![Code Climate](https://codeclimate.com/github/sitle/packer/badges/gpa.svg)](https://codeclimate.com/github/sitle/packer)
 
 [travis]: https://travis-ci.org/sitle/packer
 
