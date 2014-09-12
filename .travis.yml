@@ -8,4 +8,7 @@ script: bundle exec rake validate
 
 notifications:
   email:
-    - sysadmin@informatique.gov.pf
+    recipients:
+      - leonard.tavae@gmail.com
+      - sysadmin@informatique.gov.pf
+    on_success: always
