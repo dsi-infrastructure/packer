@@ -256,6 +256,14 @@ rake prod:build systeme=centos hypervisor=vmware version=6.5
 ```
 rake prod:build systeme=oel hypervisor=vmware version=6.4
 ```
+### Validation des templates
+
+Une procédure de validation a été écrite et est utilisable de la manière
+suivante :
+
+```
+rake validate
+```
 
 ### Déploiement
 
