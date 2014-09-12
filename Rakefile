@@ -74,6 +74,17 @@ namespace :prod do
   end
 end
 
+desc "Template validation"
+task :validate do
+  templates = Dir.glob("./templates/*.json")
+  templates.each do |template|
+    puts Rainbow("Validating #{template}").green
+    unless system "packer validate #{template}"
+      fail "#{template} is not a valid packer template"
+    end
+  end
+end
+
 task :list do
   system "ls -1 templates/*.json"
 end
