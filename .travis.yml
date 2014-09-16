@@ -12,3 +12,9 @@ notifications:
       - leonard.tavae@gmail.com
       - sysadmin@informatique.gov.pf
     on_success: always
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/8b3467fd343caf088255
+    on_success: always
+    on_failure: always
+    on_start: false
