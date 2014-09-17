@@ -69,11 +69,23 @@ vagrant init debian-7-chef http://bit.ly/1weDdiJ
 vagrant init debian-7-chef http://bit.ly/1tpmh7c
 ```
 
-#### Centos 6.5
-* [centos6.5-dev-virtualbox.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [centos6.5-dev-vmware.box](http://repository.srv.gov.pf/os/centos-6.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [centos6.5-dev-virtualbox-cm.box](http://repository.srv.gov.pf/os/centos-6.5-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
-* [centos6.5-dev-vmware-cm.box](http://repository.srv.gov.pf/os/centos-6.5-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+#### Centos 6
+* Virtualbox ([download](http://bit.ly/1nHCYaN))
+```
+vagrant init centos-6 http://bit.ly/1nHCYaN
+```
+* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
+```
+vagrant init centos-6 http://bit.ly/1w9Vu3u
+```
+* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+```
+vagrant init centos-6-chef http://bit.ly/1weDdiJ
+```
+* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
+```
+vagrant init centos-6-chef http://bit.ly/1tpmh7c
+```
 
 #### Oracle Linux Enterprise 6.4
 * [oel6.4-dev-virtualbox.box](http://repository.srv.gov.pf/os/oel-6.4-dev-virtualbox.box) (Virtualbox + Vagrant)
