@@ -1,7 +1,7 @@
 install
 cdrom
-lang en_US.UTF-8
-keyboard us
+lang fr_FR.UTF-8
+keyboard fr-latin9
 network --bootproto=dhcp
 rootpw vagrant
 firewall --disabled
