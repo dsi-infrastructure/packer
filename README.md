@@ -86,11 +86,23 @@ vagrant init centos-6-chef http://bit.ly/1weDdiJ
 vagrant init centos-6-chef http://bit.ly/1tpmh7c
 ```
 
-#### Oracle Linux Enterprise 6.4
-* [oel6.4-dev-virtualbox.box](http://repository.srv.gov.pf/os/oel-6.4-dev-virtualbox.box) (Virtualbox + Vagrant)
-* [oel6.4-dev-vmware.box](http://repository.srv.gov.pf/os/oel-6.4-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant)
-* [oel6.4-dev-virtualbox.box](http://repository.srv.gov.pf/os/oel-6.4-dev-virtualbox.box) (Virtualbox + Vagrant + chef + puppet - soon)
-* [oel6.4-dev-vmware.box](http://repository.srv.gov.pf/os/oel-6.4-dev-vmware.box) (Vmware Fusion/Vmware Workstation + Vagrant + chef + puppet - soon)
+#### Oracle Linux Enterprise 6
+* Virtualbox ([download](http://bit.ly/1nHCYaN))
+```
+vagrant init oel-6 http://bit.ly/1nHCYaN
+```
+* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
+```
+vagrant init oel-6 http://bit.ly/1w9Vu3u
+```
+* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+```
+vagrant init oel-6-chef http://bit.ly/1weDdiJ
+```
+* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
+```
+vagrant init oel-6-chef http://bit.ly/1tpmh7c
+```
 
 ### Production
 
@@ -104,17 +116,17 @@ Les images systèmes de production seront disponible directement sous Vsphere ou
 * [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
 * [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2) (Openstack)
 
-#### Debian 7.5
-* [debian7.5-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
-* [debian7.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/debian-7.5-prod-kvm.qcow2) (Openstack - very soon)
+#### Debian 7
+* [debian7-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
+* [debian7-prod-kvm.qcow2](http://repository.srv.gov.pf/os/debian-7.5-prod-kvm.qcow2) (Openstack - very soon)
 
 #### Centos 6.5
-* [centos6.5-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
-* [centos6.5-prod-kvm.qcow2](http://repository.srv.gov.pf/os/centos-6.5-prod-kvm.qcow2) (Openstack - soon)
+* [centos6-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
+* [centos6-prod-kvm.qcow2](http://repository.srv.gov.pf/os/centos-6.5-prod-kvm.qcow2) (Openstack - soon)
 
 #### Oracle Linux Enterprise 6.4
-* [oel6.4-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
-* [oel6.4-prod-kvm.qcow2](http://repository.srv.gov.pf/os/oel-6.4-prod-kvm.qcow2) (Openstack - soon)
+* [oel6-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
+* [oel6-prod-kvm.qcow2](http://repository.srv.gov.pf/os/oel-6.4-prod-kvm.qcow2) (Openstack - soon)
 
 ## Construire les images systèmes
 
@@ -128,16 +140,17 @@ Pour construire les images systèmes, il vous faut installer les pré-requis sui
 sudo apt-get install ruby ruby-dev
 ```
 
-* rake
+* bundler
 
 ```
-sudo gem install rake
+sudo gem install bundler
 ```
 
-* rainbow
+* on installe maintenant les dépendances
 
 ```
-sudo gem install rainbow
+cd packer
+bundle install
 ```
 
 Si vous voulez créer des images spécifiques aux plateformes VMWARE ou KVM (notamment pour Openstack), il vous faudra installer, en plus :
@@ -157,76 +170,49 @@ Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre 
 
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
-* Ubuntu 12.04 pour virtualbox (DEV)
+* Ubuntu 12.04 (DEV)
 
 ```
 rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04
-```
-
-* Ubuntu 12.04 pour vmware-workstation/vmware fusion (DEV)
-
-```
 rake dev:build systeme=ubuntu hypervisor=vmware version=12.04
+rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04 cm=chef
+rake dev:build systeme=ubuntu hypervisor=vmware version=12.04 cm=chef
 ```
 
-* Ubuntu 12.04 pour kvm (DEV)
-
-```
-rake dev:build systeme=ubuntu hypervisor=kvm version=12.04
-```
-
-* Ubuntu 14.04 pour virtualbox (DEV)
+* Ubuntu 14.04 (DEV)
 
 ```
 rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04
-```
-
-* Ubuntu 14.04 pour vmware-workstation/vmware fusion (DEV)
-
-```
 rake dev:build systeme=ubuntu hypervisor=vmware version=14.04
+rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04 cm=chef
+rake dev:build systeme=ubuntu hypervisor=vmware version=14.04 cm=chef
 ```
 
-* Ubuntu 14.04 pour kvm (DEV)
+* Debian 7 (DEV)
 
 ```
-rake dev:build systeme=ubuntu hypervisor=kvm version=14.04
+rake dev:build systeme=debian hypervisor=virtualbox version=7
+rake dev:build systeme=debian hypervisor=vmware version=7
+rake dev:build systeme=debian hypervisor=virtualbox version=7 cm=chef
+rake dev:build systeme=debian hypervisor=vmware version=7 cm=chef
 ```
 
-* Debian 7.5 pour virtualbox (DEV)
+* Centos 6 (DEV)
 
 ```
-rake dev:build systeme=debian hypervisor=virtualbox version=7.5
+rake dev:build systeme=centos hypervisor=virtualbox version=6
+rake dev:build systeme=centos hypervisor=vmware version=6
+rake dev:build systeme=centos hypervisor=virtualbox version=6 cm=chef
+rake dev:build systeme=centos hypervisor=vmware version=6 cm=chef
 ```
 
-* Debian 7.5 pour vmware-workstation/vmware fusion (DEV)
+* Oracle Enterprise Linux 6 (DEV)
 
 ```
-rake dev:build systeme=debian hypervisor=vmware version=7.5
-```
-
-* Centos 6.5 pour virtualbox (DEV)
-
-```
-rake dev:build systeme=centos hypervisor=virtualbox version=6.5
-```
-
-* Centos 6.5 pour vmware-workstation/vmware fusion (DEV)
-
-```
-rake dev:build systeme=centos hypervisor=vmware version=6.5
-```
-
-* Oracle Enterprise Linux 6.4 pour virtualbox (DEV)
-
-```
-rake dev:build systeme=oel hypervisor=virtualbox version=6.4
-```
-
-* Oracle Enterprise Linux 6.4 pour vmware-workstation/vmware fusion (DEV)
-
-```
-rake dev:build systeme=oel hypervisor=vmware version=6.4
+rake dev:build systeme=oel hypervisor=virtualbox version=6
+rake dev:build systeme=oel hypervisor=vmware version=6
+rake dev:build systeme=oel hypervisor=virtualbox version=6 cm=chef
+rake dev:build systeme=oel hypervisor=vmware version=6 cm=chef
 ```
 
 ### Production
