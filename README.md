@@ -1,10 +1,10 @@
 # Standardisation des systèmes
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sitle/packer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![Build
-Status](https://travis-ci.org/sitle/packer.svg?branch=master)](https://travis-ci.org/sitle/packer) [![Code Climate](https://codeclimate.com/github/sitle/packer/badges/gpa.svg)](https://codeclimate.com/github/sitle/packer)
-
+Status](https://travis-ci.org/sitle/packer.svg?branch=master)](https://travis-ci.org/sitle/packer) [![Code Climate](https://codeclimate.com/github/sitle/packer/badges/gpa.svg)](https://codeclimate.com/github/sitle/packer) 
 [travis]: https://travis-ci.org/sitle/packer
+[![Gitter
+chat](https://img.shields.io/badge/Gitter-sitle%2Fpacker-brightgreen.svg)](https://gitter.im/sitle/packer)
 
 Ce projet permet de générer des images systèmes identiques pour le développement et la production, ceci afin de minimiser les impacts fonctionnels lors des mises en production. Toutes les images systèmes générés prennent 10Go d'espace disques une fois déployées. LVM a été intégré dans les images (à l'exception des images OPENSTACK) afin de simplifier le redimensionnement des disques suivant vos besoins.
 
