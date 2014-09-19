@@ -6,11 +6,11 @@
       "override": {
         "virtualbox-iso": {
           "scripts": [
-            "scripts/centos/base.sh",
-            "scripts/centos/vagrant.sh",
-            "scripts/centos/virtualbox-tools.sh",
-            "scripts/centos/cleanup.sh",
-            "scripts/centos/zerodisk.sh"
+            "scripts/oel/base.sh",
+            "scripts/oel/vagrant.sh",
+            "scripts/oel/virtualbox-tools.sh",
+            "scripts/oel/cleanup.sh",
+            "scripts/oel/zerodisk.sh"
           ]
         }
       }
@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "oel-6.4-dev-virtualbox.box"
+          "output": "oel-6-dev-virtualbox.box"
         }
       }
     }
@@ -30,7 +30,7 @@
     {
       "type": "virtualbox-iso",
       "boot_command": [
-      	"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-dev.kickstart<enter><wait>"
+      	"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/oel-dev.kickstart<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 10240,

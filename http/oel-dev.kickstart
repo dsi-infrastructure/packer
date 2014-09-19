@@ -1,0 +1,67 @@
+install
+cdrom
+lang fr_FR.UTF-8
+keyboard fr-latin9
+network --bootproto=dhcp
+rootpw vagrant
+firewall --disabled
+selinux --permissive
+timezone UTC
+unsupported_hardware
+bootloader --location=mbr
+text
+skipx
+zerombr
+clearpart --all --initlabel
+autopart
+auth --enableshadow --passalgo=sha512 --kickstart
+firstboot --disabled
+reboot
+user --name=vagrant --plaintext --password vagrant
+
+#%packages --nobase --ignoremissing --excludedocs
+%packages
+@Base
+@Core
+
+# vagrant needs this to copy initial files via scp
+openssh-clients
+sudo
+kernel-headers
+kernel-devel
+gcc
+make
+perl
+curl
+wget
+nfs-utils
+
+# Oracle specific package
+cloog-ppl
+compat-libcap1
+compat-libstdc++-33
+cpp
+gcc-c++
+glibc-devel
+glibc-headers
+ksh
+libXmu
+libXt
+libXv
+libXxf86dga
+libXxf86misc
+libXxf86vm
+libaio-devel
+libdmx
+libstdc++-devel
+mpfr
+ppl
+xorg-x11-utils
+xorg-x11-xauth
+
+%post
+# update root certs
+wget -O/etc/pki/tls/certs/ca-bundle.crt http://curl.haxx.se/ca/cacert.pem
+# sudo
+echo "%vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
+sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers

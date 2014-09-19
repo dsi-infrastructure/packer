@@ -6,11 +6,11 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/centos/base.sh",
-            "scripts/centos/vagrant.sh",
-            "scripts/centos/vmware-tools.sh",
-            "scripts/centos/cleanup.sh",
-            "scripts/centos/zerodisk.sh"
+            "scripts/oel/base.sh",
+            "scripts/oel/vagrant.sh",
+            "scripts/oel/vmware-tools.sh",
+            "scripts/oel/cleanup.sh",
+            "scripts/oel/zerodisk.sh"
           ]
         }
       }
@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "vmware": {
-          "output": "oel-6.4-dev-vmware.box"
+          "output": "oel-6-dev-vmware.box"
         }
       }
     }
@@ -30,7 +30,7 @@
     {
       "type": "vmware-iso",
       "boot_command": [
-      	"<tab> text ks=http://192.168.0.17/packer/kickstart/centos-dev.kickstart<enter><wait>"
+      	"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/oel-dev.kickstart<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 10240,
