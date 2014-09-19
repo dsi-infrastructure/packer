@@ -3,4 +3,4 @@ output-*
 *.box
 *.qcow2
 *.ova
-
+Gemfile.lock
