@@ -50,7 +50,7 @@
         " netcfg/get_hostname=ubuntu-1205<wait>",
         " netcfg/get_domain=example.com<wait>",
         " noapic<wait>",
-        " preseed/url=http://srv4.tna.pf/cfg/ubuntu-dev.preseed<wait>",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ubuntu-dev.preseed<wait>",
         " -- <wait>",
         "<enter><wait>"
       ],

@@ -6,10 +6,10 @@
       "override": {
         "vmware-iso": {
           "scripts": [
-            "scripts/centos/base.sh",
-            "scripts/centos/vmware-tools2.sh",
-            "scripts/centos/cleanup.sh",
-            "scripts/centos/zerodisk.sh"
+            "scripts/oel/base.sh",
+            "scripts/oel/vmware-tools2.sh",
+            "scripts/oel/cleanup.sh",
+            "scripts/oel/zerodisk.sh"
           ]
         }
       }
@@ -19,14 +19,14 @@
     {
       "type": "vmware-iso",
       "boot_command": [
-      	"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-prod.kickstart<enter><wait>"
+      	"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/oel-prod.kickstart<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 10240,
-      "guest_os_type": "centos-64",
+      "guest_os_type": "oraclelinux-64",
       "http_directory": "http",
-      "iso_url": "http://localhost/packer/iso/CentOS-6.5-x86_64-bin-DVD1.iso",
-      "iso_checksum": "83221db52687c7b857e65bfe60787838",
+      "iso_url": "http://localhost/packer/iso/oel-6.4-amd64-dvd.iso",
+      "iso_checksum": "744fc1663519b4d54da1345669fcee52",
       "iso_checksum_type": "md5",
       "ssh_username": "sysadmin",
       "ssh_password": "changeit",

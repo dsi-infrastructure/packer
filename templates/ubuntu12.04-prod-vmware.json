@@ -39,7 +39,7 @@
         " netcfg/get_hostname=ubuntu-1205<wait>",
         " netcfg/get_domain=example.com<wait>",
         " noapic<wait>",
-        " preseed/url=http://cdrom.srv.gov.pf/packer/ubuntu-prod.preseed<wait>",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ubuntu-prod.preseed<wait>",
         " -- <wait>",
         "<enter><wait>"
       ],
