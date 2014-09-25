@@ -1,5 +1,4 @@
 # Standardisation des systèmes
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/dsi-infrastructure/packer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![Build
 Status](https://travis-ci.org/dsi-infrastructure/packer.svg?branch=master)](https://travis-ci.org/dsi-infrastructure/packer) [![Gitter
