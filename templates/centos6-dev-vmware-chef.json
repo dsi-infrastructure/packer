@@ -37,7 +37,7 @@
       "disk_size": 10240,
       "guest_os_type": "centos-64",
       "http_directory": "http",
-      "iso_url": "http://localhost/packer/iso/CentOS-6.5-x86_64-bin-DVD1.iso",
+      "iso_url": "http://srv4.tna.pf/iso/centos-6/CentOS-6.5-x86_64-bin-DVD1.iso",
       "iso_checksum": "83221db52687c7b857e65bfe60787838",
       "iso_checksum_type": "md5",
       "ssh_username": "vagrant",
