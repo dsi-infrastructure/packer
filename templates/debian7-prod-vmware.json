@@ -1,0 +1,58 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'changeit'|sudo -S sh '{{.Path}}'",
+      "override": {
+        "vmware-iso": {
+          "scripts": [
+            "scripts/debian/base.sh",
+            "scripts/debian/vmware-tools2.sh",
+            "scripts/debian/cleanup.sh",
+            "scripts/debian/zerodisk.sh"
+          ]
+        }
+      }
+    }
+  ],
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "boot_command": [
+        "<esc><wait>",
+        "install <wait>",
+        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/debian-prod.preseed <wait>",
+        "debian-installer=fr <wait>",
+        "auto <wait>",
+        "locale=fr_FR.UTF-8 <wait>",
+        "kbd-chooser/method=fr_FR <wait>",
+        "keyboard-configuration/xkb-keymap=fr_FR <wait>",
+        "netcfg/get_hostname=debian-7 <wait>",
+        "netcfg/get_domain=example.com <wait>",
+        "fb=false <wait>",
+        "debconf/frontend=noninteractive <wait>",
+        "console-setup/ask_detect=false <wait>",
+        "console-keymaps-at/keymap=fr <wait>",
+        "<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 10240,
+      "guest_os_type": "linux",
+      "http_directory": "http",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
+      "iso_checksum": "8738ef91931dc837ba5c6e481f98d63a7f01b101",
+      "iso_checksum_type": "sha1",
+      "ssh_username": "sysadmin",
+      "ssh_password": "changeit",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'changeit'|sudo -S /sbin/shutdown -hP now",
+      "tools_upload_flavor": "linux",
+      "vmx_data": {
+        "memsize": "512",
+        "numvcpus": "1",
+        "cpuid.coresPerSocket": "1"
+      }
+    }
+  ]
+}
