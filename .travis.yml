@@ -11,6 +11,7 @@ notifications:
     recipients:
       - leonard.tavae@gmail.com
       - sysadmin@informatique.gov.pf
+      - sysdba@informatique.gov.pf
     on_success: always
   webhooks:
     urls:
