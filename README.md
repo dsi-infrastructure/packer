@@ -104,27 +104,27 @@ vagrant init oel-6-chef http://bit.ly/1tpmh7c
 
 ### Production
 
-Les images systèmes de production seront disponible directement sous Vsphere ou via Glance pour Openstack. N'oubliez pas de changer le mot de passe du compte sysadmin (changeit).
+Les images systèmes de production seront disponible directement sous Vsphere (ou via Glance pour Openstack). N'oubliez pas de changer le mot de passe du compte sysadmin (par défaut : changeit).
 
 #### Ubuntu 12.04 LTS
-* [ubuntu12.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-vmware.ova) (Vsphere)
-* [ubuntu12.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-12.04-prod-kvm.qcow2) (Openstack)
+* ubuntu12.04-prod-vmware.ova
+* ubuntu12.04-prod-kvm.qcow2
 
 #### Ubuntu 14.04 LTS
-* [ubuntu14.04-prod-vmware.ova](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-vmware.ova) (Vsphere)
-* [ubuntu14.04-prod-kvm.qcow2](http://repository.srv.gov.pf/os/ubuntu-14.04-prod-kvm.qcow2) (Openstack)
+* ubuntu14.04-prod-vmware.ova
+* ubuntu14.04-prod-kvm.qcow2
 
 #### Debian 7
-* [debian7-prod-vmware.ova](http://repository.srv.gov.pf/os/debian-7.5-prod-vmware.ova) (Vsphere)
-* [debian7-prod-kvm.qcow2](http://repository.srv.gov.pf/os/debian-7.5-prod-kvm.qcow2) (Openstack - very soon)
+* debian7-prod-vmware.ova
+* debian7-prod-kvm.qcow2
 
 #### Centos 6.5
-* [centos6-prod-vmware.ova](http://repository.srv.gov.pf/os/centos-6.5-prod-vmware.ova) (Vsphere)
-* [centos6-prod-kvm.qcow2](http://repository.srv.gov.pf/os/centos-6.5-prod-kvm.qcow2) (Openstack - soon)
+* centos6-prod-vmware.ova
+* centos6-prod-kvm.qcow2
 
 #### Oracle Linux Enterprise 6.4
-* [oel6-prod-vmware.ova](http://repository.srv.gov.pf/os/oel-6.4-prod-vmware.ova) (Vsphere)
-* [oel6-prod-kvm.qcow2](http://repository.srv.gov.pf/os/oel-6.4-prod-kvm.qcow2) (Openstack - soon)
+* oel6-prod-vmware.ova
+* oel6-prod-kvm.qcow2
 
 ## Construire les images systèmes
 
@@ -217,47 +217,41 @@ rake dev:build systeme=oel hypervisor=vmware version=6 cm=chef
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
 
-* Ubuntu 12.04 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+* Ubuntu 12.04 (PROD)
 
 ```
 rake prod:build systeme=ubuntu hypervisor=vmware version=12.04
-```
-
-* Ubuntu 14.04 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
-
-```
-rake prod:build systeme=ubuntu hypervisor=vmware version=14.04
-```
-
-* Ubuntu 12.04 pour Openstack-kvm QCOW2 (PROD)
-
-```
 rake prod:build systeme=ubuntu hypervisor=kvm version=12.04
 ```
 
-* Ubuntu 14.04 pour Openstack-kvm QCOW2 (PROD)
+* Ubuntu 14.04 (PROD)
 
 ```
+rake prod:build systeme=ubuntu hypervisor=vmware version=14.04
 rake prod:build systeme=ubuntu hypervisor=kvm version=14.04
 ```
 
-* Debian 7.5 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+* Debian 7 (PROD)
 
 ```
-rake prod:build systeme=debian hypervisor=vmware version=7.5
+rake prod:build systeme=debian hypervisor=vmware version=7
+rake prod:build systeme=debian hypervisor=kvm version=7
 ```
 
-* Centos 6.5 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+* Centos 6 (PROD)
 
 ```
-rake prod:build systeme=centos hypervisor=vmware version=6.5
+rake prod:build systeme=centos hypervisor=vmware version=6
+rake prod:build systeme=centos hypervisor=kvm version=6
 ```
 
-* Oracle Enterprise Linux 6.4 pour vmware-esx/vmware-vsphere <= 5.1 (PROD)
+* Oracle Enterprise Linux 6 (PROD)
 
 ```
-rake prod:build systeme=oel hypervisor=vmware version=6.4
+rake prod:build systeme=oel hypervisor=vmware version=6
+rake prod:build systeme=oel hypervisor=kvm version=6
 ```
+
 ### Validation des templates
 
 Une procédure de validation a été écrite et est utilisable de la manière
@@ -266,16 +260,6 @@ suivante :
 ```
 rake validate
 ```
-
-### Déploiement
-
-Une procédure de déploiement a été écrite et est utilisable de la manière suivante :
-
-```
-rake deploy
-```
-
-Il vous faudra un compte sur le serveur permettant le déploiement des images systèmes. Une fois le déploiement effectué, les images sont disponibles sur ce site : http://repository.srv.gov.pf/os.
 
 ## Participer aux développements de ce projet
 
