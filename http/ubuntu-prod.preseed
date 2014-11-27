@@ -1,5 +1,6 @@
 choose-mirror-bin mirror/http/proxy string http://proxyapt.srv.gov.pf:3142/
-d-i mirror/http/hostname string repository.linux.pf
+choose-mirror-bin mirror/country string PF
+choose-mirror-bin mirror/http/hostname string pf.archive.ubuntu.com
 d-i base-installer/kernel/override-image string linux-server
 d-i clock-setup/utc boolean true
 d-i clock-setup/utc-auto boolean true
