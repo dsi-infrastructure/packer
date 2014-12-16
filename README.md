@@ -102,6 +102,12 @@ vagrant init oel-6-chef http://bit.ly/1weDdiJ
 vagrant init oel-6-chef http://bit.ly/1tpmh7c
 ```
 
+#### Redhat Enterprise Linux 5
+* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+```
+vagrant init redhat-5-chef http://bit.ly/1weDdiJ
+```
+
 ### Production
 
 Les images systèmes de production seront disponible directement sous Vsphere (ou via Glance pour Openstack). N'oubliez pas de changer le mot de passe du compte sysadmin (par défaut : changeit).
@@ -125,6 +131,9 @@ Les images systèmes de production seront disponible directement sous Vsphere (o
 #### Oracle Linux Enterprise 6.4
 * oel6-prod-vmware.ova
 * oel6-prod-kvm.qcow2
+
+#### Redhat Enterprise 5.4
+* redhat-5-prod-vmware.ova
 
 ## Construire les images systèmes
 
@@ -213,6 +222,12 @@ rake dev:build systeme=oel hypervisor=virtualbox version=6 cm=chef
 rake dev:build systeme=oel hypervisor=vmware version=6 cm=chef
 ```
 
+* Redhat Enterprise Linux 5 (DEV)
+
+```
+rake dev:build systeme=redhat hypervisor=virtualbox version=5 cm=chef
+```
+
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
@@ -250,6 +265,11 @@ rake prod:build systeme=centos hypervisor=kvm version=6
 ```
 rake prod:build systeme=oel hypervisor=vmware version=6
 rake prod:build systeme=oel hypervisor=kvm version=6
+```
+
+* Redhat Enterprise Linux 5 (PROD)
+```
+rake prod:build systeme=redhat hypervisor=vmware version=5
 ```
 
 ### Validation des templates
