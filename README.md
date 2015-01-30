@@ -38,7 +38,7 @@ vagrant init centos-6-chef http://bit.ly/dsi-centos-64-box
 
 #### Oracle Linux Enterprise 6
 
-* Virtualbox avec Chef ([download](http://bit.ly/dsi-oel-64-box))
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-oel-64-box))
 
 ```
 vagrant init oel-6-chef http://bit.ly/dsi-oel-64-box
@@ -46,7 +46,7 @@ vagrant init oel-6-chef http://bit.ly/dsi-oel-64-box
 
 #### Redhat Enterprise Linux 5
 
-* Virtualbox avec Chef ([download](http://bit.ly/dsi-rhel-54-box))
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-rhel-54-box))
 
 ```
 vagrant init redhat-5-chef http://bit.ly/dsi-rhel-54-box
