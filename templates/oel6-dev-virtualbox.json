@@ -36,7 +36,7 @@
       "disk_size": 10240,
       "guest_os_type": "Oracle_64",
       "http_directory": "http",
-      "iso_url": "http://localhost/packer/iso/oel-6.4-amd64-dvd.iso",
+      "iso_url": "http://iso.repository.gov.pf/oel-6.4-dvd1.iso",
       "iso_checksum": "744fc1663519b4d54da1345669fcee52",
       "iso_checksum_type": "md5",
       "ssh_username": "vagrant",
