@@ -12,24 +12,6 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
-#### Ubuntu 12.04 LTS
-* Virtualbox ([download](http://bit.ly/1xBqjzJ))
-```
-vagrant init ubuntu12.04 http://bit.ly/1xBqjzJ
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1qBqkyz))
-```
-vagrant init ubuntu12.04 http://bit.ly/1qBqkyz
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1uGLQSj))
-```
-vagrant init ubuntu12.04-chef http://bit.ly/1uGLQSj
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1qaxsDi))
-```
-vagrant init ubuntu12.04-chef http://bit.ly/1qaxsDi
-```
-
 #### Ubuntu 14.04 LTS
 * Virtualbox ([download](http://bit.ly/1nHCDF6))
 ```
@@ -112,10 +94,6 @@ vagrant init redhat-5-chef http://bit.ly/1weDdiJ
 
 Les images systèmes de production seront disponible directement sous Vsphere (ou via Glance pour Openstack). N'oubliez pas de changer le mot de passe du compte sysadmin (par défaut : changeit).
 
-#### Ubuntu 12.04 LTS
-* ubuntu12.04-prod-vmware.ova
-* ubuntu12.04-prod-kvm.qcow2
-
 #### Ubuntu 14.04 LTS
 * ubuntu14.04-prod-vmware.ova
 * ubuntu14.04-prod-kvm.qcow2
@@ -177,15 +155,6 @@ Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre 
 
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
-* Ubuntu 12.04 (DEV)
-
-```
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04
-rake dev:build systeme=ubuntu hypervisor=vmware version=12.04
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04 cm=chef
-rake dev:build systeme=ubuntu hypervisor=vmware version=12.04 cm=chef
-```
-
 * Ubuntu 14.04 (DEV)
 
 ```
@@ -231,13 +200,6 @@ rake dev:build systeme=redhat hypervisor=virtualbox version=5 cm=chef
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
-
-* Ubuntu 12.04 (PROD)
-
-```
-rake prod:build systeme=ubuntu hypervisor=vmware version=12.04
-rake prod:build systeme=ubuntu hypervisor=kvm version=12.04
-```
 
 * Ubuntu 14.04 (PROD)
 
