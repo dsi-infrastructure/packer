@@ -10,111 +10,51 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 ### Développement
 
-Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
-
-#### Ubuntu 12.04 LTS
-* Virtualbox ([download](http://bit.ly/1xBqjzJ))
-```
-vagrant init ubuntu12.04 http://bit.ly/1xBqjzJ
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1qBqkyz))
-```
-vagrant init ubuntu12.04 http://bit.ly/1qBqkyz
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1uGLQSj))
-```
-vagrant init ubuntu12.04-chef http://bit.ly/1uGLQSj
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1qaxsDi))
-```
-vagrant init ubuntu12.04-chef http://bit.ly/1qaxsDi
-```
+Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html). Pour tout vos tests (kitchen/vagrant), **merci** d'utiliser les noms spécifiés ci-dessous ainsi que l'url de téléchargement. Ceci permettra de simplifier la mise en commun de nos procédures d'automatisations.
 
 #### Ubuntu 14.04 LTS
-* Virtualbox ([download](http://bit.ly/1nHCDF6))
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-ubuntu-1404-box))
+
 ```
-vagrant init ubuntu14.04 http://bit.ly/1nHCDF6
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/WJXRuE))
-```
-vagrant init ubuntu14.04 http://bit.ly/WJXRuE
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1qBrpXj))
-```
-vagrant init ubuntu14.04-chef http://bit.ly/1qBrpXj
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1pK1sQ8))
-```
-vagrant init ubuntu14.04-chef http://bit.ly/1pK1sQ8
+vagrant init ubuntu-14.04-chef http://bit.ly/dsi-ubuntu-1404-box
 ```
 
 #### Debian 7
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-debian-7-box))
+
 ```
-vagrant init debian-7 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init debian-7 http://bit.ly/1w9Vu3u
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
-```
-vagrant init debian-7-chef http://bit.ly/1weDdiJ
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init debian-7-chef http://bit.ly/1tpmh7c
+vagrant init debian-7-chef http://bit.ly/dsi-debian-7-box
 ```
 
 #### Centos 6
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-centos-64-box))
+
 ```
-vagrant init centos-6 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init centos-6 http://bit.ly/1w9Vu3u
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
-```
-vagrant init centos-6-chef http://bit.ly/1weDdiJ
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init centos-6-chef http://bit.ly/1tpmh7c
+vagrant init centos-6-chef http://bit.ly/dsi-centos-64-box
 ```
 
 #### Oracle Linux Enterprise 6
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-oel-64-box))
+
 ```
-vagrant init oel-6 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init oel-6 http://bit.ly/1w9Vu3u
-```
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
-```
-vagrant init oel-6-chef http://bit.ly/1weDdiJ
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init oel-6-chef http://bit.ly/1tpmh7c
+vagrant init oel-6-chef http://bit.ly/dsi-oel-64-box
 ```
 
 #### Redhat Enterprise Linux 5
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-rhel-54-box))
+
 ```
-vagrant init redhat-5-chef http://bit.ly/1weDdiJ
+vagrant init redhat-5-chef http://bit.ly/dsi-rhel-54-box
 ```
 
 ### Production
 
 Les images systèmes de production seront disponible directement sous Vsphere (ou via Glance pour Openstack). N'oubliez pas de changer le mot de passe du compte sysadmin (par défaut : changeit).
-
-#### Ubuntu 12.04 LTS
-* ubuntu12.04-prod-vmware.ova
-* ubuntu12.04-prod-kvm.qcow2
 
 #### Ubuntu 14.04 LTS
 * ubuntu14.04-prod-vmware.ova
@@ -124,15 +64,15 @@ Les images systèmes de production seront disponible directement sous Vsphere (o
 * debian7-prod-vmware.ova
 * debian7-prod-kvm.qcow2
 
-#### Centos 6.5
+#### Centos 6
 * centos6-prod-vmware.ova
 * centos6-prod-kvm.qcow2
 
-#### Oracle Linux Enterprise 6.4
+#### Oracle Linux Enterprise 6
 * oel6-prod-vmware.ova
 * oel6-prod-kvm.qcow2
 
-#### Redhat Enterprise 5.4
+#### Redhat Enterprise 5
 * redhat-5-prod-vmware.ova
 
 ## Construire les images systèmes
@@ -177,49 +117,28 @@ Merci de vérifier ce que vous tapez, ces procédures sont valides vu le nombre 
 
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
-* Ubuntu 12.04 (DEV)
-
-```
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04
-rake dev:build systeme=ubuntu hypervisor=vmware version=12.04
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=12.04 cm=chef
-rake dev:build systeme=ubuntu hypervisor=vmware version=12.04 cm=chef
-```
-
 * Ubuntu 14.04 (DEV)
 
 ```
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04
-rake dev:build systeme=ubuntu hypervisor=vmware version=14.04
 rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04 cm=chef
-rake dev:build systeme=ubuntu hypervisor=vmware version=14.04 cm=chef
 ```
 
 * Debian 7 (DEV)
 
 ```
-rake dev:build systeme=debian hypervisor=virtualbox version=7
-rake dev:build systeme=debian hypervisor=vmware version=7
 rake dev:build systeme=debian hypervisor=virtualbox version=7 cm=chef
-rake dev:build systeme=debian hypervisor=vmware version=7 cm=chef
 ```
 
 * Centos 6 (DEV)
 
 ```
-rake dev:build systeme=centos hypervisor=virtualbox version=6
-rake dev:build systeme=centos hypervisor=vmware version=6
 rake dev:build systeme=centos hypervisor=virtualbox version=6 cm=chef
-rake dev:build systeme=centos hypervisor=vmware version=6 cm=chef
 ```
 
 * Oracle Enterprise Linux 6 (DEV)
 
 ```
-rake dev:build systeme=oel hypervisor=virtualbox version=6
-rake dev:build systeme=oel hypervisor=vmware version=6
 rake dev:build systeme=oel hypervisor=virtualbox version=6 cm=chef
-rake dev:build systeme=oel hypervisor=vmware version=6 cm=chef
 ```
 
 * Redhat Enterprise Linux 5 (DEV)
@@ -231,13 +150,6 @@ rake dev:build systeme=redhat hypervisor=virtualbox version=5 cm=chef
 ### Production
 
 Les systèmes de production ne contient pas de compte vagrant, celui-ci est remplacé par le compte sysadmin (password: changeit). Ces images seront utilisés par VMWare et Openstack (KVM).
-
-* Ubuntu 12.04 (PROD)
-
-```
-rake prod:build systeme=ubuntu hypervisor=vmware version=12.04
-rake prod:build systeme=ubuntu hypervisor=kvm version=12.04
-```
 
 * Ubuntu 14.04 (PROD)
 
@@ -268,6 +180,7 @@ rake prod:build systeme=oel hypervisor=kvm version=6
 ```
 
 * Redhat Enterprise Linux 5 (PROD)
+
 ```
 rake prod:build systeme=redhat hypervisor=vmware version=5
 ```

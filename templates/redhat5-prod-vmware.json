@@ -25,7 +25,7 @@
       "disk_size": 10240,
       "guest_os_type": "rhel5-64",
       "http_directory": "http",
-      "iso_url": "http://localhost/~sitle/rhel5.4.iso",
+      "iso_url": "http://iso.repository.gov.pf/rhel-5.4-dvd1.iso",
       "iso_checksum": "04fe3c10202402d7b389528d2bad0210",
       "iso_checksum_type": "md5",
       "ssh_username": "sysadmin",
