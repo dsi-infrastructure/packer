@@ -13,79 +13,40 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
 
 #### Ubuntu 14.04 LTS
-* Virtualbox ([download](http://bit.ly/1nHCDF6))
-```
-vagrant init ubuntu14.04 http://bit.ly/1nHCDF6
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/WJXRuE))
-```
-vagrant init ubuntu14.04 http://bit.ly/WJXRuE
-```
+
 * Virtualbox avec Chef ([download](http://bit.ly/1qBrpXj))
+
 ```
 vagrant init ubuntu14.04-chef http://bit.ly/1qBrpXj
 ```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1pK1sQ8))
-```
-vagrant init ubuntu14.04-chef http://bit.ly/1pK1sQ8
-```
 
 #### Debian 7
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
-```
-vagrant init debian-7 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init debian-7 http://bit.ly/1w9Vu3u
-```
+
 * Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
 ```
 vagrant init debian-7-chef http://bit.ly/1weDdiJ
 ```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init debian-7-chef http://bit.ly/1tpmh7c
-```
 
 #### Centos 6
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
-```
-vagrant init centos-6 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init centos-6 http://bit.ly/1w9Vu3u
-```
+
 * Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
 ```
 vagrant init centos-6-chef http://bit.ly/1weDdiJ
 ```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init centos-6-chef http://bit.ly/1tpmh7c
-```
 
 #### Oracle Linux Enterprise 6
-* Virtualbox ([download](http://bit.ly/1nHCYaN))
-```
-vagrant init oel-6 http://bit.ly/1nHCYaN
-```
-* VMware Fusion/Workstation ([download](http://bit.ly/1w9Vu3u))
-```
-vagrant init oel-6 http://bit.ly/1w9Vu3u
-```
+
 * Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
 ```
 vagrant init oel-6-chef http://bit.ly/1weDdiJ
-```
-* VMware Fusion/Workstation avec Chef ([download](http://bit.ly/1tpmh7c))
-```
-vagrant init oel-6-chef http://bit.ly/1tpmh7c
 ```
 
 #### Redhat Enterprise Linux 5
 * Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
 ```
 vagrant init redhat-5-chef http://bit.ly/1weDdiJ
 ```
@@ -158,37 +119,25 @@ Les systèmes de développement sont des images utilisables par [Vagrant](http:/
 * Ubuntu 14.04 (DEV)
 
 ```
-rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04
-rake dev:build systeme=ubuntu hypervisor=vmware version=14.04
 rake dev:build systeme=ubuntu hypervisor=virtualbox version=14.04 cm=chef
-rake dev:build systeme=ubuntu hypervisor=vmware version=14.04 cm=chef
 ```
 
 * Debian 7 (DEV)
 
 ```
-rake dev:build systeme=debian hypervisor=virtualbox version=7
-rake dev:build systeme=debian hypervisor=vmware version=7
 rake dev:build systeme=debian hypervisor=virtualbox version=7 cm=chef
-rake dev:build systeme=debian hypervisor=vmware version=7 cm=chef
 ```
 
 * Centos 6 (DEV)
 
 ```
-rake dev:build systeme=centos hypervisor=virtualbox version=6
-rake dev:build systeme=centos hypervisor=vmware version=6
 rake dev:build systeme=centos hypervisor=virtualbox version=6 cm=chef
-rake dev:build systeme=centos hypervisor=vmware version=6 cm=chef
 ```
 
 * Oracle Enterprise Linux 6 (DEV)
 
 ```
-rake dev:build systeme=oel hypervisor=virtualbox version=6
-rake dev:build systeme=oel hypervisor=vmware version=6
 rake dev:build systeme=oel hypervisor=virtualbox version=6 cm=chef
-rake dev:build systeme=oel hypervisor=vmware version=6 cm=chef
 ```
 
 * Redhat Enterprise Linux 5 (DEV)
