@@ -10,45 +10,46 @@ Ce projet permet de générer des images systèmes identiques pour le développe
 
 ### Développement
 
-Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html).
+Les systèmes de développement sont des images utilisables par [Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html). Pour tout vos tests (kitchen/vagrant), **merci** d'utiliser les noms spécifiés ci-dessous ainsi que l'url de téléchargement. Ceci permettra de simplifier la mise en commun de nos procédures d'automatisations.
 
 #### Ubuntu 14.04 LTS
 
-* Virtualbox avec Chef ([download](http://bit.ly/1qBrpXj))
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-ubuntu-1404-box))
 
 ```
-vagrant init ubuntu14.04-chef http://bit.ly/1qBrpXj
+vagrant init ubuntu-14.04-chef http://bit.ly/dsi-ubuntu-1404-box
 ```
 
 #### Debian 7
 
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-debian-7-box))
 
 ```
-vagrant init debian-7-chef http://bit.ly/1weDdiJ
+vagrant init debian-7-chef http://bit.ly/dsi-debian-7-box
 ```
 
 #### Centos 6
 
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-centos-64-box))
 
 ```
-vagrant init centos-6-chef http://bit.ly/1weDdiJ
+vagrant init centos-6-chef http://bit.ly/dsi-centos-64-box
 ```
 
 #### Oracle Linux Enterprise 6
 
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+* Virtualbox avec Chef ([download](http://bit.ly/dsi-oel-64-box))
 
 ```
-vagrant init oel-6-chef http://bit.ly/1weDdiJ
+vagrant init oel-6-chef http://bit.ly/dsi-oel-64-box
 ```
 
 #### Redhat Enterprise Linux 5
-* Virtualbox avec Chef ([download](http://bit.ly/1weDdiJ))
+
+* Virtualbox avec Chef ([download](http://bit.ly/dsi-rhel-54-box))
 
 ```
-vagrant init redhat-5-chef http://bit.ly/1weDdiJ
+vagrant init redhat-5-chef http://bit.ly/dsi-rhel-54-box
 ```
 
 ### Production
@@ -63,15 +64,15 @@ Les images systèmes de production seront disponible directement sous Vsphere (o
 * debian7-prod-vmware.ova
 * debian7-prod-kvm.qcow2
 
-#### Centos 6.5
+#### Centos 6
 * centos6-prod-vmware.ova
 * centos6-prod-kvm.qcow2
 
-#### Oracle Linux Enterprise 6.4
+#### Oracle Linux Enterprise 6
 * oel6-prod-vmware.ova
 * oel6-prod-kvm.qcow2
 
-#### Redhat Enterprise 5.4
+#### Redhat Enterprise 5
 * redhat-5-prod-vmware.ova
 
 ## Construire les images systèmes
@@ -179,6 +180,7 @@ rake prod:build systeme=oel hypervisor=kvm version=6
 ```
 
 * Redhat Enterprise Linux 5 (PROD)
+
 ```
 rake prod:build systeme=redhat hypervisor=vmware version=5
 ```
