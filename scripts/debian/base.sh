@@ -2,8 +2,9 @@ apt-get update
 apt-get -y upgrade
 apt-get -y install linux-headers-$(uname -r)
 
-sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=sudo' /etc/sudoers
-sed -i -e 's/%sudo  ALL=(ALL:ALL) ALL/%sudo  ALL=NOPASSWD:ALL/g' /etc/sudoers
+grep -q 'secure_path' /etc/sudoers || sed -i -e '/Defaults\s\+env_reset/a Defaults\tsecure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"' /etc/sudoers
+
+cat /etc/sudoers
 
 grep -qs autocd /root/.bashrc || echo "shopt -s autocd\nalias l='ls -al'" >>/root/.bashrc
 
