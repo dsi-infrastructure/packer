@@ -20,6 +20,14 @@ Les systèmes de développement sont des images utilisables par [Vagrant](http:/
 vagrant init ubuntu-14.04-chef http://bit.ly/dsi-ubuntu-1404-box
 ```
 
+#### Ubuntu 14.10
+
+* Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-ubuntu-1410-box))
+
+```
+vagrant init ubuntu-14.10-chef http://bit.ly/dsi-ubuntu-1410-box
+```
+
 #### Debian 7
 
 * Virtualbox avec Chef intégré ([download](http://bit.ly/dsi-debian-7-box))
@@ -59,6 +67,10 @@ Les images systèmes de production seront disponible directement sous Vsphere (o
 #### Ubuntu 14.04 LTS
 * ubuntu14.04-prod-vmware.ova
 * ubuntu14.04-prod-kvm.qcow2
+
+#### Ubuntu 14.10
+* ubuntu14.10-prod-vmware.ova
+* ubuntu14.10-prod-kvm.qcow2
 
 #### Debian 7
 * debian7-prod-vmware.ova
@@ -158,6 +170,13 @@ rake prod:build systeme=ubuntu hypervisor=vmware version=14.04
 rake prod:build systeme=ubuntu hypervisor=kvm version=14.04
 ```
 
+* Ubuntu 14.10 (PROD)
+
+```
+rake prod:build systeme=ubuntu hypervisor=vmware version=14.10
+rake prod:build systeme=ubuntu hypervisor=kvm version=14.10
+```
+
 * Debian 7 (PROD)
 
 ```
@@ -197,4 +216,3 @@ rake validate
 ## Participer aux développements de ce projet
 
 Vous pouvez participer à ce projet en le forkant et en soumettant des PR (Pull Request).
-
